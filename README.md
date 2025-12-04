@@ -96,16 +96,24 @@ flowchart LR
 			end
 			subgraph wm_app_doc[doc]
 				direction LR
+				subgraph wm_app_doc_cnv[cnv]
+					direction LR
+					wm_app_doc_cnv__Pandoc[Pandoc]
+				end
+				subgraph wm_app_doc_gen[gen]
+					direction LR
+					wm_app_doc_gen_latex[latex]
+				end
 				subgraph wm_app_doc_pdf[pdf]
 					direction LR
 					subgraph wm_app_doc_pdf_cnv[cnv]
 						direction LR
 						wm_app_doc_pdf_cnv__Ghostscript[Ghostscript]
 					end
-				end
-				subgraph wm_app_doc_gen[gen]
-					direction LR
-					wm_app_doc_gen_latex[latex]
+					subgraph wm_app_doc_pdf_utl[utl]
+						direction LR
+						wm_app_doc_pdf_utl__Tabula[Tabula]
+					end
 				end
 				subgraph wm_app_doc_wiki[wiki]
 					direction LR
@@ -127,6 +135,10 @@ flowchart LR
 			end
 			subgraph wm_app_sys[sys]
 				direction LR
+				subgraph wm_app_sys_emu[emu]
+					direction LR
+					wm_app_sys_emu__QEMU[QEMU]
+				end
 				subgraph wm_app_sys_win[win]
 					direction LR
 					wm_app_sys_win__SysinternalsSuite[SysinternalsSuite]
@@ -174,11 +186,15 @@ flowchart LR
 				click wm_app_dev_lng_pi__Picat "https://github.com/wenuam/wm_app_dev_lng_pi__Picat" _blank
 			click wm_app_dev_lng_python "https://github.com/wenuam/wm_app_dev_lng_python" _blank
 	click wm_app_doc "https://github.com/wenuam/wm_app_doc" _blank
+		click wm_app_doc_cnv "https://github.com/wenuam/wm_app_doc_cnv" _blank
+			click wm_app_doc_cnv__Pandoc "https://github.com/wenuam/wm_app_doc_cnv__Pandoc" _blank
+		click wm_app_doc_gen "https://github.com/wenuam/wm_app_doc_gen" _blank
+			click wm_app_doc_gen_latex "https://github.com/wenuam/wm_app_doc_gen_latex" _blank
 		click wm_app_doc_pdf "https://github.com/wenuam/wm_app_doc_pdf" _blank
 			click wm_app_doc_pdf_cnv "https://github.com/wenuam/wm_app_doc_pdf_cnv" _blank
 				click wm_app_doc_pdf_cnv__Ghostscript "https://github.com/wenuam/wm_app_doc_pdf_cnv__Ghostscript" _blank
-		click wm_app_doc_gen "https://github.com/wenuam/wm_app_doc_gen" _blank
-			click wm_app_doc_gen_latex "https://github.com/wenuam/wm_app_doc_gen_latex" _blank
+			click wm_app_doc_pdf_utl "https://github.com/wenuam/wm_app_doc_pdf_utl" _blank
+				click wm_app_doc_pdf_utl__Tabula "https://github.com/wenuam/wm_app_doc_pdf_utl__Tabula" _blank
 		click wm_app_doc_wiki "https://github.com/wenuam/wm_app_doc_wiki" _blank
 			click wm_app_doc_wiki_tiddly "https://github.com/wenuam/wm_app_doc_wiki_tiddly" _blank
 				click wm_app_doc_wiki_tiddly__bob "https://github.com/wenuam/wm_app_doc_wiki_tiddly__bob" _blank
@@ -187,6 +203,8 @@ flowchart LR
 			click wm_app_img_2d_gen "https://github.com/wenuam/wm_app_img_2d_gen" _blank
 				click wm_app_img_2d_gen__ImageMagick "https://github.com/wenuam/wm_app_img_2d_gen__ImageMagick" _blank
 	click wm_app_sys "https://github.com/wenuam/wm_app_sys" _blank
+		click wm_app_sys_emu "https://github.com/wenuam/wm_app_sys_emu" _blank
+			click wm_app_sys_emu__QEMU "https://github.com/wenuam/wm_app_sys_emu__QEMU" _blank
 		click wm_app_sys_win "https://github.com/wenuam/wm_app_sys_win" _blank
 			click wm_app_sys_win__SysinternalsSuite "https://github.com/wenuam/wm_app_sys_win__SysinternalsSuite" _blank
 
@@ -228,11 +246,15 @@ flowchart LR
 	class wm_app_dev_lng_python lvl4
 
 	class wm_app_doc lvl2
+	class wm_app_doc_cnv lvl3
+	class wm_app_doc_cnv__Pandoc lvl4
+	class wm_app_doc_gen lvl3
+	class wm_app_doc_gen_latex lvl4
 	class wm_app_doc_pdf lvl3
 	class wm_app_doc_pdf_cnv lvl4
 	class wm_app_doc_pdf_cnv__Ghostscript lvl5
-	class wm_app_doc_gen lvl3
-	class wm_app_doc_gen_latex lvl4
+	class wm_app_doc_pdf_utl lvl4
+	class wm_app_doc_pdf_utl__Tabula lvl5
 	class wm_app_doc_wiki lvl3
 	class wm_app_doc_wiki_tiddly lvl4
 	class wm_app_doc_wiki_tiddly__bob lvl5
@@ -243,6 +265,8 @@ flowchart LR
 	class wm_app_img_2d_gen__ImageMagick lvl5
 
 	class wm_app_sys lvl2
+	class wm_app_sys_emu lvl3
+	class wm_app_sys_emu__QEMU lvl4
 	class wm_app_sys_win lvl3
 	class wm_app_sys_win__SysinternalsSuite lvl4
 

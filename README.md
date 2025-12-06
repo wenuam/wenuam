@@ -119,7 +119,7 @@ flowchart LR
 					direction LR
 					subgraph wm_app_doc_wiki_tiddly[tiddly]
 						direction LR
-						wm_app_doc_wiki_tiddly__bob[bob]
+						wm_app_doc_wiki_tiddly__Bob[Bob]
 					end
 				end
 			end
@@ -127,10 +127,22 @@ flowchart LR
 				direction LR
 				subgraph wm_app_img_2d[2d]
 					direction LR
+					subgraph wm_app_img_2d_ed[ed]
+						direction LR
+						wm_app_img_2d_ed__Dia[Dia]
+						wm_app_img_2d_ed__yEd[yEd]
+					end
 					subgraph wm_app_img_2d_gen[gen]
 						direction LR
+						wm_app_img_2d_gen__ditaa[ditaa]
+						wm_app_img_2d_gen__Graphviz[Graphviz]
 						wm_app_img_2d_gen__ImageMagick[ImageMagick]
+						wm_app_img_2d_gen__mscgen[mscgen]
 					end
+				end
+				subgraph wm_app_img_ocr[ocr]
+					direction LR
+					wm_app_img_ocr__Tesseract[Tesseract]
 				end
 			end
 			subgraph wm_app_sys[sys]
@@ -159,7 +171,7 @@ flowchart LR
 				direction LR
 				subgraph wm_dev_scm_git[git]
 					direction LR
-					wm_dev_scm_git_helpers[helpers]
+					wm_dev_scm_git__Helpers[Helpers]
 				end
 			end
 		end
@@ -175,9 +187,11 @@ flowchart LR
 	click wm "https://github.com/wenuam" _blank
 
 	click wm_app "https://github.com/wenuam/wm_app" _blank
+
 	click wm_app_db "https://github.com/wenuam/wm_app_db" _blank
 		click wm_app_db_sql "https://github.com/wenuam/wm_app_db_sql" _blank
 			click wm_app_db_sql__PostgreSQL "https://github.com/wenuam/wm_app_db_sql__PostgreSQL" _blank
+
 	click wm_app_dev "https://github.com/wenuam/wm_app_dev" _blank
 		click wm_app_dev_lng "https://github.com/wenuam/wm_app_dev_lng" _blank
 			click wm_app_dev_lng_jar "https://github.com/wenuam/wm_app_dev_lng_jar" _blank
@@ -185,6 +199,7 @@ flowchart LR
 			click wm_app_dev_lng_pi "https://github.com/wenuam/wm_app_dev_lng_pi" _blank
 				click wm_app_dev_lng_pi__Picat "https://github.com/wenuam/wm_app_dev_lng_pi__Picat" _blank
 			click wm_app_dev_lng_python "https://github.com/wenuam/wm_app_dev_lng_python" _blank
+
 	click wm_app_doc "https://github.com/wenuam/wm_app_doc" _blank
 		click wm_app_doc_cnv "https://github.com/wenuam/wm_app_doc_cnv" _blank
 			click wm_app_doc_cnv__Pandoc "https://github.com/wenuam/wm_app_doc_cnv__Pandoc" _blank
@@ -197,11 +212,21 @@ flowchart LR
 				click wm_app_doc_pdf_utl__Tabula "https://github.com/wenuam/wm_app_doc_pdf_utl__Tabula" _blank
 		click wm_app_doc_wiki "https://github.com/wenuam/wm_app_doc_wiki" _blank
 			click wm_app_doc_wiki_tiddly "https://github.com/wenuam/wm_app_doc_wiki_tiddly" _blank
-				click wm_app_doc_wiki_tiddly__bob "https://github.com/wenuam/wm_app_doc_wiki_tiddly__bob" _blank
+				click wm_app_doc_wiki_tiddly__Bob "https://github.com/wenuam/wm_app_doc_wiki_tiddly__Bob" _blank
+
 	click wm_app_img "https://github.com/wenuam/wm_app_img" _blank
 		click wm_app_img_2d "https://github.com/wenuam/wm_app_img_2d" _blank
+			click wm_app_img_2d_ed "https://github.com/wenuam/wm_app_img_2d_ed" _blank
+				click wm_app_img_2d_ed__Dia "https://github.com/wenuam/wm_app_img_2d_ed__Dia" _blank
+				click wm_app_img_2d_ed__yEd "https://github.com/wenuam/wm_app_img_2d_ed__yEd" _blank
 			click wm_app_img_2d_gen "https://github.com/wenuam/wm_app_img_2d_gen" _blank
+				click wm_app_img_2d_gen__ditaa "https://github.com/wenuam/wm_app_img_2d_gen__ditaa" _blank
+				click wm_app_img_2d_gen__Graphviz "https://github.com/wenuam/wm_app_img_2d_gen__Graphviz" _blank
 				click wm_app_img_2d_gen__ImageMagick "https://github.com/wenuam/wm_app_img_2d_gen__ImageMagick" _blank
+				click wm_app_img_2d_gen__mscgen "https://github.com/wenuam/wm_app_img_2d_gen__mscgen" _blank
+		click wm_app_img_ocr "https://github.com/wenuam/wm_app_img_ocr" _blank
+			click wm_app_img_ocr__Tesseract "https://github.com/wenuam/wm_app_img_ocr__Tesseract" _blank
+
 	click wm_app_sys "https://github.com/wenuam/wm_app_sys" _blank
 		click wm_app_sys_emu "https://github.com/wenuam/wm_app_sys_emu" _blank
 			click wm_app_sys_emu__QEMU "https://github.com/wenuam/wm_app_sys_emu__QEMU" _blank
@@ -209,15 +234,18 @@ flowchart LR
 			click wm_app_sys_win__SysinternalsSuite "https://github.com/wenuam/wm_app_sys_win__SysinternalsSuite" _blank
 
 	click wm_dev "https://github.com/wenuam/wm_dev" _blank
+
 	click wm_dev_lng "https://github.com/wenuam/wm_dev_lng" _blank
 		click wm_dev_lng_c "https://github.com/wenuam/wm_dev_lng_c" _blank
 			click wm_dev_lng_c_includes "https://github.com/wenuam/wm_dev_lng_c_includes" _blank
 		click wm_dev_lng_fori "https://github.com/wenuam/wm_dev_lng_fori" _blank
+
 	click wm_dev_scm "https://github.com/wenuam/wm_dev_scm" _blank
 		click wm_dev_scm_git "https://github.com/wenuam/wm_dev_scm_git" _blank
-			click wm_dev_scm_git_helpers "https://github.com/wenuam/wm_dev_scm_git_helpers" _blank
+			click wm_dev_scm_git__Helpers "https://github.com/wenuam/wm_dev_scm_git__Helpers" _blank
 
 	click wm_key "https://github.com/wenuam/wm_key" _blank
+
 	click wm_key_map "https://github.com/wenuam/wm_key_map" _blank
 		click wm_key_map_cfilorux "https://github.com/wenuam/wm_key_map_cfilorux" _blank
 
@@ -257,12 +285,20 @@ flowchart LR
 	class wm_app_doc_pdf_utl__Tabula lvl5
 	class wm_app_doc_wiki lvl3
 	class wm_app_doc_wiki_tiddly lvl4
-	class wm_app_doc_wiki_tiddly__bob lvl5
+	class wm_app_doc_wiki_tiddly__Bob lvl5
 
 	class wm_app_img lvl2
 	class wm_app_img_2d lvl3
+	class wm_app_img_2d_ed lvl4
+	class wm_app_img_2d_ed__Dia lvl5
+	class wm_app_img_2d_ed__yEd lvl5
 	class wm_app_img_2d_gen lvl4
+	class wm_app_img_2d_gen__ditaa lvl5
+	class wm_app_img_2d_gen__Graphviz lvl5
 	class wm_app_img_2d_gen__ImageMagick lvl5
+	class wm_app_img_2d_gen__mscgen lvl5
+	class wm_app_img_ocr lvl3
+	class wm_app_img_ocr__Tesseract lvl4
 
 	class wm_app_sys lvl2
 	class wm_app_sys_emu lvl3
@@ -278,7 +314,7 @@ flowchart LR
 
 	class wm_dev_scm lvl2
 	class wm_dev_scm_git lvl3
-	class wm_dev_scm_git_helpers lvl4
+	class wm_dev_scm_git__Helpers lvl4
 
 	class wm_key lvl1
 	class wm_key_map lvl2

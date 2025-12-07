@@ -104,6 +104,13 @@ flowchart LR
 					direction LR
 					wm_app_doc_gen_latex[latex]
 				end
+				subgraph wm_app_doc_tex[latex]
+					direction LR
+					subgraph wm_app_doc_tex_gen[gen]
+						direction LR
+						wm_app_doc_tex_gen__Miktex[Miktex]
+					end
+				end
 				subgraph wm_app_doc_pdf[pdf]
 					direction LR
 					subgraph wm_app_doc_pdf_cnv[cnv]
@@ -130,6 +137,7 @@ flowchart LR
 					subgraph wm_app_img_2d_ed[ed]
 						direction LR
 						wm_app_img_2d_ed__Dia[Dia]
+						wm_app_img_2d_ed__Inkscape[Inkscape]
 						wm_app_img_2d_ed__yEd[yEd]
 					end
 					subgraph wm_app_img_2d_gen[gen]
@@ -205,6 +213,9 @@ flowchart LR
 			click wm_app_doc_cnv__Pandoc "https://github.com/wenuam/wm_app_doc_cnv__Pandoc" _blank
 		click wm_app_doc_gen "https://github.com/wenuam/wm_app_doc_gen" _blank
 			click wm_app_doc_gen_latex "https://github.com/wenuam/wm_app_doc_gen_latex" _blank
+		click wm_app_doc_tex "https://github.com/wenuam/wm_app_doc_tex" _blank
+			click wm_app_doc_tex_gen "https://github.com/wenuam/wm_app_doc_tex_gen" _blank
+				click wm_app_doc_tex_gen__Miktex "https://github.com/wenuam/wm_app_doc_tex_gen__Miktex" _blank
 		click wm_app_doc_pdf "https://github.com/wenuam/wm_app_doc_pdf" _blank
 			click wm_app_doc_pdf_cnv "https://github.com/wenuam/wm_app_doc_pdf_cnv" _blank
 				click wm_app_doc_pdf_cnv__Ghostscript "https://github.com/wenuam/wm_app_doc_pdf_cnv__Ghostscript" _blank
@@ -218,6 +229,7 @@ flowchart LR
 		click wm_app_img_2d "https://github.com/wenuam/wm_app_img_2d" _blank
 			click wm_app_img_2d_ed "https://github.com/wenuam/wm_app_img_2d_ed" _blank
 				click wm_app_img_2d_ed__Dia "https://github.com/wenuam/wm_app_img_2d_ed__Dia" _blank
+				click wm_app_img_2d_ed__Inkscape "https://github.com/wenuam/wm_app_img_2d_ed__Inkscape" _blank
 				click wm_app_img_2d_ed__yEd "https://github.com/wenuam/wm_app_img_2d_ed__yEd" _blank
 			click wm_app_img_2d_gen "https://github.com/wenuam/wm_app_img_2d_gen" _blank
 				click wm_app_img_2d_gen__ditaa "https://github.com/wenuam/wm_app_img_2d_gen__ditaa" _blank
@@ -278,6 +290,9 @@ flowchart LR
 	class wm_app_doc_cnv__Pandoc lvl4
 	class wm_app_doc_gen lvl3
 	class wm_app_doc_gen_latex lvl4
+	class wm_app_doc_tex lvl3
+	class wm_app_doc_tex_gen lvl4
+	class wm_app_doc_tex_gen__Miktex lvl5
 	class wm_app_doc_pdf lvl3
 	class wm_app_doc_pdf_cnv lvl4
 	class wm_app_doc_pdf_cnv__Ghostscript lvl5
@@ -291,6 +306,7 @@ flowchart LR
 	class wm_app_img_2d lvl3
 	class wm_app_img_2d_ed lvl4
 	class wm_app_img_2d_ed__Dia lvl5
+	class wm_app_img_2d_ed__Inkscape lvl5
 	class wm_app_img_2d_ed__yEd lvl5
 	class wm_app_img_2d_gen lvl4
 	class wm_app_img_2d_gen__ditaa lvl5

@@ -91,7 +91,15 @@ flowchart LR
 						direction LR
 						wm_app_dev_lng_pi__Picat[Picat]
 					end
+					subgraph wm_app_dev_lng_pl[pl]
+						direction LR
+						wm_app_dev_lng_pl__StrawberryPerl[StrawberryPerl]
+					end
 					wm_app_dev_lng_python[python]
+					subgraph wm_app_dev_lng_v[v]
+						direction LR
+						wm_app_dev_lng_v__vlang[vlang]
+					end
 				end
 			end
 			subgraph wm_app_doc[doc]
@@ -206,7 +214,11 @@ flowchart LR
 				click wm_app_dev_lng_jar__jdk "https://github.com/wenuam/wm_app_dev_lng_jar__jdk" _blank
 			click wm_app_dev_lng_pi "https://github.com/wenuam/wm_app_dev_lng_pi" _blank
 				click wm_app_dev_lng_pi__Picat "https://github.com/wenuam/wm_app_dev_lng_pi__Picat" _blank
+			click wm_app_dev_lng_pl "https://github.com/wenuam/wm_app_dev_lng_pl" _blank
+				click wm_app_dev_lng_pl__StrawberryPerl "https://github.com/wenuam/wm_app_dev_lng_pl__StrawberryPerl" _blank
 			click wm_app_dev_lng_python "https://github.com/wenuam/wm_app_dev_lng_python" _blank
+			click wm_app_dev_lng_v "https://github.com/wenuam/wm_app_dev_lng_v" _blank
+				click wm_app_dev_lng_v__vlang "https://github.com/wenuam/wm_app_dev_lng_v__vlang" _blank
 
 	click wm_app_doc "https://github.com/wenuam/wm_app_doc" _blank
 		click wm_app_doc_cnv "https://github.com/wenuam/wm_app_doc_cnv" _blank
@@ -283,7 +295,11 @@ flowchart LR
 	class wm_app_dev_lng_jar__jdk lvl5
 	class wm_app_dev_lng_pi lvl4
 	class wm_app_dev_lng_pi__Picat lvl5
+	class wm_app_dev_lng_pl lvl4
+	class wm_app_dev_lng_pl__StrawberryPerl lvl5
 	class wm_app_dev_lng_python lvl4
+	class wm_app_dev_lng_v lvl4
+	class wm_app_dev_lng_v__vlang lvl5
 
 	class wm_app_doc lvl2
 	class wm_app_doc_cnv lvl3

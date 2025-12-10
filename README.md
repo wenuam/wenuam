@@ -83,9 +83,25 @@ flowchart LR
 				direction LR
 				subgraph wm_app_dev_lng[lng]
 					direction LR
+					subgraph wm_app_dev_lng_bas[bas]
+						direction LR
+						wm_app_dev_lng_bas__my_basic[my_basic]
+					end
+					subgraph wm_app_dev_lng_cpp[cpp]
+						direction LR
+						wm_app_dev_lng_cpp__WinLibs[WinLibs]
+					end
 					subgraph wm_app_dev_lng_jar[jar]
 						direction LR
 						wm_app_dev_lng_jar__jdk[jdk]
+					end
+					subgraph wm_app_dev_lng_lua[lua]
+						direction LR
+						wm_app_dev_lng_lua__Lua[Lua]
+					end
+					subgraph wm_app_dev_lng_pas[pas]
+						direction LR
+						wm_app_dev_lng_pas__FreePascal[FreePascal]
 					end
 					subgraph wm_app_dev_lng_pi[pi]
 						direction LR
@@ -210,8 +226,16 @@ flowchart LR
 
 	click wm_app_dev "https://github.com/wenuam/wm_app_dev" _blank
 		click wm_app_dev_lng "https://github.com/wenuam/wm_app_dev_lng" _blank
+			click wm_app_dev_lng_bas "https://github.com/wenuam/wm_app_dev_lng_bas" _blank
+				click wm_app_dev_lng_bas__my_basic "https://github.com/wenuam/wm_app_dev_lng_bas__my_basic" _blank
+			click wm_app_dev_lng_cpp "https://github.com/wenuam/wm_app_dev_lng_cpp" _blank
+				click wm_app_dev_lng_cpp__WinLibs "https://github.com/wenuam/wm_app_dev_lng_cpp__WinLibs" _blank
 			click wm_app_dev_lng_jar "https://github.com/wenuam/wm_app_dev_lng_jar" _blank
 				click wm_app_dev_lng_jar__jdk "https://github.com/wenuam/wm_app_dev_lng_jar__jdk" _blank
+			click wm_app_dev_lng_lua "https://github.com/wenuam/wm_app_dev_lng_lua" _blank
+				click wm_app_dev_lng_lua__Lua "https://github.com/wenuam/wm_app_dev_lng_lua__Lua" _blank
+			click wm_app_dev_lng_pas "https://github.com/wenuam/wm_app_dev_lng_pas" _blank
+				click wm_app_dev_lng_pas__FreePascal "https://github.com/wenuam/wm_app_dev_lng_pas__FreePascal" _blank
 			click wm_app_dev_lng_pi "https://github.com/wenuam/wm_app_dev_lng_pi" _blank
 				click wm_app_dev_lng_pi__Picat "https://github.com/wenuam/wm_app_dev_lng_pi__Picat" _blank
 			click wm_app_dev_lng_pl "https://github.com/wenuam/wm_app_dev_lng_pl" _blank
@@ -291,8 +315,16 @@ flowchart LR
 
 	class wm_app_dev lvl2
 	class wm_app_dev_lng lvl3
+	class wm_app_dev_lng_bas lvl4
+	class wm_app_dev_lng_bas__my_basic lvl5
+	class wm_app_dev_lng_cpp lvl4
+	class wm_app_dev_lng_cpp__WinLibs lvl5
 	class wm_app_dev_lng_jar lvl4
 	class wm_app_dev_lng_jar__jdk lvl5
+	class wm_app_dev_lng_lua lvl4
+	class wm_app_dev_lng_lua__Lua lvl5
+	class wm_app_dev_lng_pas lvl4
+	class wm_app_dev_lng_pas__FreePascal lvl5
 	class wm_app_dev_lng_pi lvl4
 	class wm_app_dev_lng_pi__Picat lvl5
 	class wm_app_dev_lng_pl lvl4

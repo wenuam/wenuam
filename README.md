@@ -87,6 +87,10 @@ flowchart LR
 						direction LR
 						wm_app_dev_lng_bas__my_basic[my_basic]
 					end
+					subgraph wm_app_dev_lng_c[c]
+						direction LR
+						wm_app_dev_lng_c__PellesC[PellesC]
+					end
 					subgraph wm_app_dev_lng_cpp[cpp]
 						direction LR
 						wm_app_dev_lng_cpp__WinLibs[WinLibs]
@@ -115,6 +119,13 @@ flowchart LR
 					subgraph wm_app_dev_lng_v[v]
 						direction LR
 						wm_app_dev_lng_v__vlang[vlang]
+					end
+				end
+				subgraph wm_app_dev_scm[scm]
+					direction LR
+					subgraph wm_app_dev_scm_git[git]
+						direction LR
+						wm_app_dev_scm_git__Git[Git]
 					end
 				end
 			end
@@ -228,6 +239,8 @@ flowchart LR
 		click wm_app_dev_lng "https://github.com/wenuam/wm_app_dev_lng" _blank
 			click wm_app_dev_lng_bas "https://github.com/wenuam/wm_app_dev_lng_bas" _blank
 				click wm_app_dev_lng_bas__my_basic "https://github.com/wenuam/wm_app_dev_lng_bas__my_basic" _blank
+			click wm_app_dev_lng_c "https://github.com/wenuam/wm_app_dev_lng_c" _blank
+				click wm_app_dev_lng_c__PellesC "https://github.com/wenuam/wm_app_dev_lng_c__PellesC" _blank
 			click wm_app_dev_lng_cpp "https://github.com/wenuam/wm_app_dev_lng_cpp" _blank
 				click wm_app_dev_lng_cpp__WinLibs "https://github.com/wenuam/wm_app_dev_lng_cpp__WinLibs" _blank
 			click wm_app_dev_lng_jar "https://github.com/wenuam/wm_app_dev_lng_jar" _blank
@@ -243,6 +256,9 @@ flowchart LR
 			click wm_app_dev_lng_python "https://github.com/wenuam/wm_app_dev_lng_python" _blank
 			click wm_app_dev_lng_v "https://github.com/wenuam/wm_app_dev_lng_v" _blank
 				click wm_app_dev_lng_v__vlang "https://github.com/wenuam/wm_app_dev_lng_v__vlang" _blank
+		click wm_app_dev_scm "https://github.com/wenuam/wm_app_dev_scm" _blank
+			click wm_app_dev_scm_git "https://github.com/wenuam/wm_app_dev_scm_git" _blank
+				click wm_app_dev_scm_git__Git "https://github.com/wenuam/wm_app_dev_scm_git__Git" _blank
 
 	click wm_app_doc "https://github.com/wenuam/wm_app_doc" _blank
 		click wm_app_doc_cnv "https://github.com/wenuam/wm_app_doc_cnv" _blank
@@ -317,6 +333,8 @@ flowchart LR
 	class wm_app_dev_lng lvl3
 	class wm_app_dev_lng_bas lvl4
 	class wm_app_dev_lng_bas__my_basic lvl5
+	class wm_app_dev_lng_c lvl4
+	class wm_app_dev_lng_c__PellesC lvl5
 	class wm_app_dev_lng_cpp lvl4
 	class wm_app_dev_lng_cpp__WinLibs lvl5
 	class wm_app_dev_lng_jar lvl4
@@ -332,6 +350,9 @@ flowchart LR
 	class wm_app_dev_lng_python lvl4
 	class wm_app_dev_lng_v lvl4
 	class wm_app_dev_lng_v__vlang lvl5
+	class wm_app_dev_scm lvl3
+	class wm_app_dev_scm_git lvl4
+	class wm_app_dev_scm_git__Git lvl5
 
 	class wm_app_doc lvl2
 	class wm_app_doc_cnv lvl3

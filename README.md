@@ -116,6 +116,10 @@ flowchart LR
 						wm_app_dev_lng_pl__StrawberryPerl[StrawberryPerl]
 					end
 					wm_app_dev_lng_python[python]
+					subgraph wm_app_dev_lng_rkt[rkt]
+						direction LR
+						wm_app_dev_lng_rkt__Racket[Racket]
+					end
 					subgraph wm_app_dev_lng_v[v]
 						direction LR
 						wm_app_dev_lng_v__vlang[vlang]
@@ -254,6 +258,8 @@ flowchart LR
 			click wm_app_dev_lng_pl "https://github.com/wenuam/wm_app_dev_lng_pl" _blank
 				click wm_app_dev_lng_pl__StrawberryPerl "https://github.com/wenuam/wm_app_dev_lng_pl__StrawberryPerl" _blank
 			click wm_app_dev_lng_python "https://github.com/wenuam/wm_app_dev_lng_python" _blank
+			click wm_app_dev_lng_rkt "https://github.com/wenuam/wm_app_dev_lng_rkt" _blank
+				click wm_app_dev_lng_rkt__Racket "https://github.com/wenuam/wm_app_dev_lng_rkt__Racket" _blank
 			click wm_app_dev_lng_v "https://github.com/wenuam/wm_app_dev_lng_v" _blank
 				click wm_app_dev_lng_v__vlang "https://github.com/wenuam/wm_app_dev_lng_v__vlang" _blank
 		click wm_app_dev_scm "https://github.com/wenuam/wm_app_dev_scm" _blank
@@ -348,6 +354,8 @@ flowchart LR
 	class wm_app_dev_lng_pl lvl4
 	class wm_app_dev_lng_pl__StrawberryPerl lvl5
 	class wm_app_dev_lng_python lvl4
+	class wm_app_dev_lng_rkt lvl4
+	class wm_app_dev_lng_rkt__Racket lvl5
 	class wm_app_dev_lng_v lvl4
 	class wm_app_dev_lng_v__vlang lvl5
 	class wm_app_dev_scm lvl3

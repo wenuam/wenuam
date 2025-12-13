@@ -99,6 +99,10 @@ flowchart LR
 						direction LR
 						wm_app_dev_lng_jar__jdk[jdk]
 					end
+					subgraph wm_app_dev_lng_js[js]
+						direction LR
+						wm_app_dev_lng_js__node[node]
+					end
 					subgraph wm_app_dev_lng_lua[lua]
 						direction LR
 						wm_app_dev_lng_lua__Lua[Lua]
@@ -249,6 +253,8 @@ flowchart LR
 				click wm_app_dev_lng_cpp__WinLibs "https://github.com/wenuam/wm_app_dev_lng_cpp__WinLibs" _blank
 			click wm_app_dev_lng_jar "https://github.com/wenuam/wm_app_dev_lng_jar" _blank
 				click wm_app_dev_lng_jar__jdk "https://github.com/wenuam/wm_app_dev_lng_jar__jdk" _blank
+			click wm_app_dev_lng_js "https://github.com/wenuam/wm_app_dev_lng_js" _blank
+				click wm_app_dev_lng_js__node "https://github.com/wenuam/wm_app_dev_lng_js__node" _blank
 			click wm_app_dev_lng_lua "https://github.com/wenuam/wm_app_dev_lng_lua" _blank
 				click wm_app_dev_lng_lua__Lua "https://github.com/wenuam/wm_app_dev_lng_lua__Lua" _blank
 			click wm_app_dev_lng_pas "https://github.com/wenuam/wm_app_dev_lng_pas" _blank
@@ -345,6 +351,8 @@ flowchart LR
 	class wm_app_dev_lng_cpp__WinLibs lvl5
 	class wm_app_dev_lng_jar lvl4
 	class wm_app_dev_lng_jar__jdk lvl5
+	class wm_app_dev_lng_js lvl4
+	class wm_app_dev_lng_js__node lvl5
 	class wm_app_dev_lng_lua lvl4
 	class wm_app_dev_lng_lua__Lua lvl5
 	class wm_app_dev_lng_pas lvl4

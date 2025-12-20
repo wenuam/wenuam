@@ -204,6 +204,10 @@ flowchart LR
 				end
 				subgraph wm_app_sys_win[win]
 					direction LR
+					subgraph wm_app_sys_win_fs[fs]
+						direction LR
+						wm_app_sys_win_fs__pfm[pfm]
+					end
 					wm_app_sys_win__SysinternalsSuite[SysinternalsSuite]
 				end
 			end
@@ -307,6 +311,8 @@ flowchart LR
 		click wm_app_sys_emu "https://github.com/wenuam/wm_app_sys_emu" _blank
 			click wm_app_sys_emu__QEMU "https://github.com/wenuam/wm_app_sys_emu__QEMU" _blank
 		click wm_app_sys_win "https://github.com/wenuam/wm_app_sys_win" _blank
+			click wm_app_sys_win_fs "https://github.com/wenuam/wm_app_sys_win_fs" _blank
+				click wm_app_sys_win_fs__pfm "https://github.com/wenuam/wm_app_sys_win_fs__pfm" _blank
 			click wm_app_sys_win__SysinternalsSuite "https://github.com/wenuam/wm_app_sys_win__SysinternalsSuite" _blank
 
 	click wm_dev "https://github.com/wenuam/wm_dev" _blank
@@ -405,6 +411,8 @@ flowchart LR
 	class wm_app_sys_emu lvl3
 	class wm_app_sys_emu__QEMU lvl4
 	class wm_app_sys_win lvl3
+	class wm_app_sys_win_fs lvl4
+	class wm_app_sys_win_fs__pfm lvl5
 	class wm_app_sys_win__SysinternalsSuite lvl4
 
 	class wm_dev lvl1

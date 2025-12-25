@@ -107,6 +107,10 @@ flowchart LR
 						direction LR
 						wm_app_dev_lng_lua__Lua[Lua]
 					end
+					subgraph wm_app_dev_lng_m2[m2]
+						direction LR
+						wm_app_dev_lng_m2__Modula2[Modula2]
+					end
 					subgraph wm_app_dev_lng_pas[pas]
 						direction LR
 						wm_app_dev_lng_pas__FreePascal[FreePascal]
@@ -208,7 +212,10 @@ flowchart LR
 						direction LR
 						wm_app_sys_win_fs__pfm[pfm]
 					end
-					wm_app_sys_win__SysinternalsSuite[SysinternalsSuite]
+					subgraph wm_app_sys_win_utl[utl]
+						direction LR
+						wm_app_sys_win_utl__SysinternalsSuite[SysinternalsSuite]
+					end
 				end
 			end
 		end
@@ -261,6 +268,8 @@ flowchart LR
 				click wm_app_dev_lng_js__node "https://github.com/wenuam/wm_app_dev_lng_js__node" _blank
 			click wm_app_dev_lng_lua "https://github.com/wenuam/wm_app_dev_lng_lua" _blank
 				click wm_app_dev_lng_lua__Lua "https://github.com/wenuam/wm_app_dev_lng_lua__Lua" _blank
+			click wm_app_dev_lng_m2 "https://github.com/wenuam/wm_app_dev_lng_m2" _blank
+				click wm_app_dev_lng_m2__Modula2 "https://github.com/wenuam/wm_app_dev_lng_m2__Modula2" _blank
 			click wm_app_dev_lng_pas "https://github.com/wenuam/wm_app_dev_lng_pas" _blank
 				click wm_app_dev_lng_pas__FreePascal "https://github.com/wenuam/wm_app_dev_lng_pas__FreePascal" _blank
 			click wm_app_dev_lng_pi "https://github.com/wenuam/wm_app_dev_lng_pi" _blank
@@ -313,7 +322,8 @@ flowchart LR
 		click wm_app_sys_win "https://github.com/wenuam/wm_app_sys_win" _blank
 			click wm_app_sys_win_fs "https://github.com/wenuam/wm_app_sys_win_fs" _blank
 				click wm_app_sys_win_fs__pfm "https://github.com/wenuam/wm_app_sys_win_fs__pfm" _blank
-			click wm_app_sys_win__SysinternalsSuite "https://github.com/wenuam/wm_app_sys_win__SysinternalsSuite" _blank
+			click wm_app_sys_win_utl "https://github.com/wenuam/wm_app_sys_win_utl" _blank
+				click wm_app_sys_win_utl__SysinternalsSuite "https://github.com/wenuam/wm_app_sys_win_utl__SysinternalsSuite" _blank
 
 	click wm_dev "https://github.com/wenuam/wm_dev" _blank
 
@@ -361,6 +371,8 @@ flowchart LR
 	class wm_app_dev_lng_js__node lvl5
 	class wm_app_dev_lng_lua lvl4
 	class wm_app_dev_lng_lua__Lua lvl5
+	class wm_app_dev_lng_m2 lvl4
+	class wm_app_dev_lng_m2__Modula2 lvl5
 	class wm_app_dev_lng_pas lvl4
 	class wm_app_dev_lng_pas__FreePascal lvl5
 	class wm_app_dev_lng_pi lvl4
@@ -413,7 +425,8 @@ flowchart LR
 	class wm_app_sys_win lvl3
 	class wm_app_sys_win_fs lvl4
 	class wm_app_sys_win_fs__pfm lvl5
-	class wm_app_sys_win__SysinternalsSuite lvl4
+	class wm_app_sys_win_utl lvl4
+	class wm_app_sys_win_utl__SysinternalsSuite lvl5
 
 	class wm_dev lvl1
 	class wm_dev_lng lvl2
